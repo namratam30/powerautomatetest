@@ -1,0 +1,2142 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Directline",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "servers": [
+    {
+      "url": "https://directline.botframework.com"
+    }
+  ],
+  "paths": {
+    "/v3/directline/tokens/generate": {
+      "post": {
+        "summary": "Token Generate",
+        "description": "Token Generate",
+        "operationId": "tokenGenerate",
+        "responses": {
+          "200": {
+            "description": "200 - Token Generate",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "gzip"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "936"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:21:44 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string",
+                  "example": "Accept-Encoding"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "x-ms-request-id": {
+                "schema": {
+                  "type": "string",
+                  "example": "35aa3744221cd1a429f3bf1b5e4ce045"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "conversationId": {
+                      "type": "string",
+                      "example": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                    },
+                    "expires_in": {
+                      "type": "number",
+                      "example": 3600
+                    },
+                    "token": {
+                      "type": "string",
+                      "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsIng1dCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsInR5cCI6IkpXVCJ9.eyJib3QiOiI4MTIwZjk4YS0yOGVkLWExYTMtN2ZlZC0wMzZjZTRmZGRkODgiLCJzaXRlIjoib0NDOHQ0WEtwU0EiLCJjb252IjoiRTl1R05KTkZjU005Q01iSVdXNklqMi1hcyIsIm5iZiI6MTczMjg3OTMwNSwiZXhwIjoxNzMyODgyOTA1LCJpc3MiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLCJhdWQiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8ifQ.ZXW8FSWEvxSeF3MsqudCCRzdMTFuyioAB0U4Dh4ITM6rbsHsHTxHvjbphrz9JALRIWlHuw_agNO_5HogSl6PGfZQUa6-hDpDSmG53qqp4ZinaSYrJvNxJyEfHLYa5XcuNLO9yoZxXFKvIxCkpDCrknn7hEmxl9kHFwwCH-RHXj-LfkmRxSPTmhBprJIEo26JtmoSjKiDJEq2g_auhDCXklKyLAGoTZh10znXhFUcRFI-2FhXz7qE4J9_iNGgwASNshE7F48kSf4exstqSWwe7FmsmUI-2D_7c_FaA99KXB8_9HK8W9WNd1uhmLE2HMHlX7rAzbTjG6wfJyLns8_ZZQ"
+                    }
+                  }
+                },
+                "examples": {
+                  "200 - Token Generate": {
+                    "value": {
+                      "conversationId": "E9uGNJNFcSM9CMbIWW6Ij2-as",
+                      "expires_in": 3600,
+                      "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsIng1dCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsInR5cCI6IkpXVCJ9.eyJib3QiOiI4MTIwZjk4YS0yOGVkLWExYTMtN2ZlZC0wMzZjZTRmZGRkODgiLCJzaXRlIjoib0NDOHQ0WEtwU0EiLCJjb252IjoiRTl1R05KTkZjU005Q01iSVdXNklqMi1hcyIsIm5iZiI6MTczMjg3OTMwNSwiZXhwIjoxNzMyODgyOTA1LCJpc3MiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLCJhdWQiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8ifQ.ZXW8FSWEvxSeF3MsqudCCRzdMTFuyioAB0U4Dh4ITM6rbsHsHTxHvjbphrz9JALRIWlHuw_agNO_5HogSl6PGfZQUa6-hDpDSmG53qqp4ZinaSYrJvNxJyEfHLYa5XcuNLO9yoZxXFKvIxCkpDCrknn7hEmxl9kHFwwCH-RHXj-LfkmRxSPTmhBprJIEo26JtmoSjKiDJEq2g_auhDCXklKyLAGoTZh10znXhFUcRFI-2FhXz7qE4J9_iNGgwASNshE7F48kSf4exstqSWwe7FmsmUI-2D_7c_FaA99KXB8_9HK8W9WNd1uhmLE2HMHlX7rAzbTjG6wfJyLns8_ZZQ"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403 - Token Generate",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "93"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:23:40 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string",
+                          "example": "BadArgument"
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Invalid token or secret"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "403 - Token Generate": {
+                    "value": {
+                      "error": {
+                        "code": "BadArgument",
+                        "message": "Invalid token or secret"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/v3/directline/conversations": {
+      "post": {
+        "summary": "Conversation Start",
+        "description": "Conversation Start",
+        "operationId": "conversationStart",
+        "responses": {
+          "201": {
+            "description": "201 - Conversation Start",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "1842"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:23:05 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "x-ms-request-id": {
+                "schema": {
+                  "type": "string",
+                  "example": "0cadaf64e7387aa1875d7701eefc9674"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "conversationId": {
+                      "type": "string",
+                      "example": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                    },
+                    "expires_in": {
+                      "type": "number",
+                      "example": 3600
+                    },
+                    "referenceGrammarId": {
+                      "type": "string",
+                      "example": "d818285f-973b-3c58-a5f0-9176cd19938a"
+                    },
+                    "streamUrl": {
+                      "type": "string",
+                      "example": "wss://directline.botframework.com/v3/directline/conversations/E9uGNJNFcSM9CMbIWW6Ij2-as/stream?watermark=-&t=eyJhbGciOiJSUzI1NiIsImtpZCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsIng1dCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsInR5cCI6IkpXVCJ9.eyJib3QiOiI4MTIwZjk4YS0yOGVkLWExYTMtN2ZlZC0wMzZjZTRmZGRkODgiLCJzaXRlIjoib0NDOHQ0WEtwU0EiLCJjb252IjoiRTl1R05KTkZjU005Q01iSVdXNklqMi1hcyIsIm5iZiI6MTczMjg3OTM4NSwiZXhwIjoxNzMyODc5NDQ1LCJpc3MiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLCJhdWQiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8ifQ.WKktLJEFvkdXq5oB8ppw2mn1HbrwdONGpEgXmuBCEF7t3MSyKMIPyNjjkuGA2J4OJis8qBW6JvnEqVm830Vi5ctk12oHd7-qTSPCgTPFusgK2tOsSHUXyeBouX04wpsZddu_xtZyvcjIliaNftdJP_4w-q3rJgToxvCLdvTsA-n9S4wkLupvT4AmkVt7XVknEFu3uAiBACfJPgS-i_V8fQfMe_pJnwOrRYwg6jeFKR8Z9yGn1IK3tvHjPdmXnjur8CLShE2S0RIcvL4XXKeQVrkFwpeTqx_B17inrdDbenY03OLEqfFGQVjLh9o_0aVN-fojsYGbpdyc-r5zZXOQaw"
+                    },
+                    "token": {
+                      "type": "string",
+                      "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsIng1dCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsInR5cCI6IkpXVCJ9.eyJib3QiOiI4MTIwZjk4YS0yOGVkLWExYTMtN2ZlZC0wMzZjZTRmZGRkODgiLCJzaXRlIjoib0NDOHQ0WEtwU0EiLCJjb252IjoiRTl1R05KTkZjU005Q01iSVdXNklqMi1hcyIsIm5iZiI6MTczMjg3OTM4NSwiZXhwIjoxNzMyODgyOTg1LCJpc3MiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLCJhdWQiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8ifQ.NYNtpVcFYSo2KH4skv_F_tPJ5E6p06LbERbmN4t1W3D4lqcr0A6KqwBfyQq3ZVjpQ5BRpc6Qyg40VjaRq0Nfv-pD3nbV6nTmQwNiG1P-1Xq_su5QigNP8lQhPbrQhjc528sCw6Sndo4Ed5VI56ML4dKy5F8LoBmCIrtiDKiCjtPh_5axA5sxOPzN_93nQgI05tLWDOPs001AK0HrE066JToCWMUsnDSltT9ORvexonzbaQzF5W3faihvjuddrbDJ382CACdP6yx912urFe_-ZEdKar3IbQhGPsTn_ntjvEJaGjSPpLYl-kyMNsPD4ZEZsqq5kMb3HWRBCNseiSerNw"
+                    }
+                  }
+                },
+                "examples": {
+                  "201 - Conversation Start": {
+                    "value": {
+                      "conversationId": "E9uGNJNFcSM9CMbIWW6Ij2-as",
+                      "expires_in": 3600,
+                      "referenceGrammarId": "d818285f-973b-3c58-a5f0-9176cd19938a",
+                      "streamUrl": "wss://directline.botframework.com/v3/directline/conversations/E9uGNJNFcSM9CMbIWW6Ij2-as/stream?watermark=-&t=eyJhbGciOiJSUzI1NiIsImtpZCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsIng1dCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsInR5cCI6IkpXVCJ9.eyJib3QiOiI4MTIwZjk4YS0yOGVkLWExYTMtN2ZlZC0wMzZjZTRmZGRkODgiLCJzaXRlIjoib0NDOHQ0WEtwU0EiLCJjb252IjoiRTl1R05KTkZjU005Q01iSVdXNklqMi1hcyIsIm5iZiI6MTczMjg3OTM4NSwiZXhwIjoxNzMyODc5NDQ1LCJpc3MiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLCJhdWQiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8ifQ.WKktLJEFvkdXq5oB8ppw2mn1HbrwdONGpEgXmuBCEF7t3MSyKMIPyNjjkuGA2J4OJis8qBW6JvnEqVm830Vi5ctk12oHd7-qTSPCgTPFusgK2tOsSHUXyeBouX04wpsZddu_xtZyvcjIliaNftdJP_4w-q3rJgToxvCLdvTsA-n9S4wkLupvT4AmkVt7XVknEFu3uAiBACfJPgS-i_V8fQfMe_pJnwOrRYwg6jeFKR8Z9yGn1IK3tvHjPdmXnjur8CLShE2S0RIcvL4XXKeQVrkFwpeTqx_B17inrdDbenY03OLEqfFGQVjLh9o_0aVN-fojsYGbpdyc-r5zZXOQaw",
+                      "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsIng1dCI6ImlmOEs0aFg4R1hXVnZkS3pwdFRFWFJveURTUSIsInR5cCI6IkpXVCJ9.eyJib3QiOiI4MTIwZjk4YS0yOGVkLWExYTMtN2ZlZC0wMzZjZTRmZGRkODgiLCJzaXRlIjoib0NDOHQ0WEtwU0EiLCJjb252IjoiRTl1R05KTkZjU005Q01iSVdXNklqMi1hcyIsIm5iZiI6MTczMjg3OTM4NSwiZXhwIjoxNzMyODgyOTg1LCJpc3MiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLCJhdWQiOiJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8ifQ.NYNtpVcFYSo2KH4skv_F_tPJ5E6p06LbERbmN4t1W3D4lqcr0A6KqwBfyQq3ZVjpQ5BRpc6Qyg40VjaRq0Nfv-pD3nbV6nTmQwNiG1P-1Xq_su5QigNP8lQhPbrQhjc528sCw6Sndo4Ed5VI56ML4dKy5F8LoBmCIrtiDKiCjtPh_5axA5sxOPzN_93nQgI05tLWDOPs001AK0HrE066JToCWMUsnDSltT9ORvexonzbaQzF5W3faihvjuddrbDJ382CACdP6yx912urFe_-ZEdKar3IbQhGPsTn_ntjvEJaGjSPpLYl-kyMNsPD4ZEZsqq5kMb3HWRBCNseiSerNw"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403 - Conversation Start",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "93"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:24:14 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string",
+                          "example": "BadArgument"
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Invalid token or secret"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "403 - Conversation Start": {
+                    "value": {
+                      "error": {
+                        "code": "BadArgument",
+                        "message": "Invalid token or secret"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/v3/directline/conversations/{CONVERSATION_ID}/activities": {
+      "get": {
+        "summary": "Check Responses",
+        "description": "Check Responses",
+        "operationId": "checkResponses",
+        "responses": {
+          "200": {
+            "description": "200 - Check Responses",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "gzip"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "2485"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:32:07 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string",
+                  "example": "Accept-Encoding"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "x-ms-request-id": {
+                "schema": {
+                  "type": "string",
+                  "example": "6ce5b07a4231f9e9839b720abe168c44"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "attachments": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "channelId": {
+                            "type": "string",
+                            "example": "directline"
+                          },
+                          "conversation": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "example": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                              }
+                            }
+                          },
+                          "entities": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "from": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "example": "user1"
+                              },
+                              "name": {
+                                "type": "string",
+                                "example": "Metrolinx Agent"
+                              },
+                              "role": {
+                                "type": "string",
+                                "example": "bot"
+                              }
+                            }
+                          },
+                          "id": {
+                            "type": "string",
+                            "example": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000"
+                          },
+                          "inputHint": {
+                            "type": "string",
+                            "example": "acceptingInput"
+                          },
+                          "listenFor": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "membersAdded": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "membersRemoved": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "reactionsAdded": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "reactionsRemoved": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "replyToId": {
+                            "type": "string",
+                            "example": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000"
+                          },
+                          "serviceUrl": {
+                            "type": "string",
+                            "example": "https://directline.botframework.com/"
+                          },
+                          "suggestedActions": {
+                            "type": "object",
+                            "properties": {
+                              "actions": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "text": {
+                                      "type": "string",
+                                      "example": "Yes"
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "example": "Yes"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "example": "imBack"
+                                    },
+                                    "value": {
+                                      "type": "string",
+                                      "example": "Yes"
+                                    }
+                                  }
+                                },
+                                "example": [
+                                  {
+                                    "text": "Yes",
+                                    "title": "Yes",
+                                    "type": "imBack",
+                                    "value": "Yes"
+                                  },
+                                  {
+                                    "text": "No",
+                                    "title": "No",
+                                    "type": "imBack",
+                                    "value": "No"
+                                  }
+                                ]
+                              },
+                              "to": {
+                                "type": "array",
+                                "items": {},
+                                "example": []
+                              }
+                            }
+                          },
+                          "text": {
+                            "type": "string",
+                            "example": "lock my card"
+                          },
+                          "textFormat": {
+                            "type": "string",
+                            "example": "markdown"
+                          },
+                          "textHighlights": {
+                            "type": "array",
+                            "items": {},
+                            "example": []
+                          },
+                          "timestamp": {
+                            "type": "string",
+                            "example": "2024-11-29T11:29:56.4000849Z"
+                          },
+                          "type": {
+                            "type": "string",
+                            "example": "message"
+                          },
+                          "value": {
+                            "type": "object",
+                            "properties": {
+                              "actionSubmitId": {
+                                "type": "string",
+                                "example": "xxxx-xxxx-0001"
+                              },
+                              "type": {
+                                "type": "string",
+                                "example": "Credit Cards"
+                              },
+                              "value": {
+                                "type": "string",
+                                "example": "xxxx-xxxx-0001"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "example": [
+                        {
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "from": {
+                            "id": "user1"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000",
+                          "serviceUrl": "https://directline.botframework.com/",
+                          "text": "lock my card",
+                          "timestamp": "2024-11-29T11:29:56.4000849Z",
+                          "type": "message"
+                        },
+                        {
+                          "attachments": [],
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "entities": [],
+                          "from": {
+                            "id": "8120f98a-28ed-a1a3-7fed-036ce4fddd88",
+                            "name": "Metrolinx Agent",
+                            "role": "bot"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000001",
+                          "inputHint": "acceptingInput",
+                          "listenFor": [],
+                          "membersAdded": [],
+                          "membersRemoved": [],
+                          "reactionsAdded": [],
+                          "reactionsRemoved": [],
+                          "replyToId": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000",
+                          "text": "Please select the card which you want to lock?",
+                          "textFormat": "markdown",
+                          "textHighlights": [],
+                          "timestamp": "2024-11-29T11:30:01.6046897Z",
+                          "type": "message"
+                        },
+                        {
+                          "attachments": [
+                            {
+                              "content": {
+                                "body": [
+                                  {
+                                    "items": [
+                                      {
+                                        "columns": null,
+                                        "text": "Credit Cards:",
+                                        "type": "TextBlock",
+                                        "weight": "bolder",
+                                        "wrap": true
+                                      },
+                                      {
+                                        "columns": [
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0001",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0001"
+                                                    },
+                                                    "title": "xxxx-xxxx-0001",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0002",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0002"
+                                                    },
+                                                    "title": "xxxx-xxxx-0002",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0003",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0003"
+                                                    },
+                                                    "title": "xxxx-xxxx-0003",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0004",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0004"
+                                                    },
+                                                    "title": "xxxx-xxxx-0004",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0005",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0005"
+                                                    },
+                                                    "title": "xxxx-xxxx-0005",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0006",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0006"
+                                                    },
+                                                    "title": "xxxx-xxxx-0006",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0007",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0007"
+                                                    },
+                                                    "title": "xxxx-xxxx-0007",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0008",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0008"
+                                                    },
+                                                    "title": "xxxx-xxxx-0008",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          },
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0009",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0009"
+                                                    },
+                                                    "title": "xxxx-xxxx-0009",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0010",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0010"
+                                                    },
+                                                    "title": "xxxx-xxxx-0010",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0011",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0011"
+                                                    },
+                                                    "title": "xxxx-xxxx-0011",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0012",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0012"
+                                                    },
+                                                    "title": "xxxx-xxxx-0012",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0013",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0013"
+                                                    },
+                                                    "title": "xxxx-xxxx-0013",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0014",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0014"
+                                                    },
+                                                    "title": "xxxx-xxxx-0014",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0015",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0015"
+                                                    },
+                                                    "title": "xxxx-xxxx-0015",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0016",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0016"
+                                                    },
+                                                    "title": "xxxx-xxxx-0016",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          }
+                                        ],
+                                        "text": null,
+                                        "type": "ColumnSet",
+                                        "weight": null,
+                                        "wrap": null
+                                      }
+                                    ],
+                                    "type": "Container"
+                                  },
+                                  {
+                                    "items": [
+                                      {
+                                        "columns": null,
+                                        "text": "Debit Cards:",
+                                        "type": "TextBlock",
+                                        "weight": "bolder",
+                                        "wrap": true
+                                      },
+                                      {
+                                        "columns": [
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0017",
+                                                      "type": "Debit Cards",
+                                                      "value": "xxxx-xxxx-0017"
+                                                    },
+                                                    "title": "xxxx-xxxx-0017",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          }
+                                        ],
+                                        "text": null,
+                                        "type": "ColumnSet",
+                                        "weight": null,
+                                        "wrap": null
+                                      }
+                                    ],
+                                    "type": "Container"
+                                  },
+                                  {
+                                    "items": [
+                                      {
+                                        "columns": null,
+                                        "text": "ETickets:",
+                                        "type": "TextBlock",
+                                        "weight": "bolder",
+                                        "wrap": true
+                                      },
+                                      {
+                                        "columns": [
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0018",
+                                                      "type": "ETickets",
+                                                      "value": "xxxx-xxxx-0018"
+                                                    },
+                                                    "title": "xxxx-xxxx-0018",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0019",
+                                                      "type": "ETickets",
+                                                      "value": "xxxx-xxxx-0019"
+                                                    },
+                                                    "title": "xxxx-xxxx-0019",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          },
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0020",
+                                                      "type": "ETickets",
+                                                      "value": "xxxx-xxxx-0020"
+                                                    },
+                                                    "title": "xxxx-xxxx-0020",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          }
+                                        ],
+                                        "text": null,
+                                        "type": "ColumnSet",
+                                        "weight": null,
+                                        "wrap": null
+                                      }
+                                    ],
+                                    "type": "Container"
+                                  }
+                                ],
+                                "type": "AdaptiveCard",
+                                "version": "1.0"
+                              },
+                              "contentType": "application/vnd.microsoft.card.adaptive"
+                            }
+                          ],
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "entities": [],
+                          "from": {
+                            "id": "8120f98a-28ed-a1a3-7fed-036ce4fddd88",
+                            "name": "Metrolinx Agent",
+                            "role": "bot"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000002",
+                          "inputHint": "acceptingInput",
+                          "listenFor": [],
+                          "membersAdded": [],
+                          "membersRemoved": [],
+                          "reactionsAdded": [],
+                          "reactionsRemoved": [],
+                          "replyToId": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000",
+                          "textHighlights": [],
+                          "timestamp": "2024-11-29T11:30:01.9183596Z",
+                          "type": "message"
+                        },
+                        {
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "from": {
+                            "id": "user1"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000003",
+                          "serviceUrl": "https://directline.botframework.com/",
+                          "text": "",
+                          "timestamp": "2024-11-29T11:30:59.091078Z",
+                          "type": "message",
+                          "value": {
+                            "actionSubmitId": "xxxx-xxxx-0001",
+                            "type": "Credit Cards",
+                            "value": "xxxx-xxxx-0001"
+                          }
+                        },
+                        {
+                          "attachments": [],
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "entities": [],
+                          "from": {
+                            "id": "8120f98a-28ed-a1a3-7fed-036ce4fddd88",
+                            "name": "Metrolinx Agent",
+                            "role": "bot"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000004",
+                          "inputHint": "acceptingInput",
+                          "listenFor": [],
+                          "membersAdded": [],
+                          "membersRemoved": [],
+                          "reactionsAdded": [],
+                          "reactionsRemoved": [],
+                          "replyToId": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000003",
+                          "suggestedActions": {
+                            "actions": [
+                              {
+                                "text": "Yes",
+                                "title": "Yes",
+                                "type": "imBack",
+                                "value": "Yes"
+                              },
+                              {
+                                "text": "No",
+                                "title": "No",
+                                "type": "imBack",
+                                "value": "No"
+                              }
+                            ],
+                            "to": []
+                          },
+                          "text": "Are you sure you want to lock the following card:\n- **Card Type:** Credit Cards\n- **Card Value:** xxxx-xxxx-0001",
+                          "textFormat": "markdown",
+                          "textHighlights": [],
+                          "timestamp": "2024-11-29T11:30:59.9758186Z",
+                          "type": "message"
+                        }
+                      ]
+                    },
+                    "watermark": {
+                      "type": "string",
+                      "example": "4"
+                    }
+                  }
+                },
+                "examples": {
+                  "200 - Check Responses": {
+                    "value": {
+                      "activities": [
+                        {
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "from": {
+                            "id": "user1"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000",
+                          "serviceUrl": "https://directline.botframework.com/",
+                          "text": "lock my card",
+                          "timestamp": "2024-11-29T11:29:56.4000849Z",
+                          "type": "message"
+                        },
+                        {
+                          "attachments": [],
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "entities": [],
+                          "from": {
+                            "id": "8120f98a-28ed-a1a3-7fed-036ce4fddd88",
+                            "name": "Metrolinx Agent",
+                            "role": "bot"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000001",
+                          "inputHint": "acceptingInput",
+                          "listenFor": [],
+                          "membersAdded": [],
+                          "membersRemoved": [],
+                          "reactionsAdded": [],
+                          "reactionsRemoved": [],
+                          "replyToId": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000",
+                          "text": "Please select the card which you want to lock?",
+                          "textFormat": "markdown",
+                          "textHighlights": [],
+                          "timestamp": "2024-11-29T11:30:01.6046897Z",
+                          "type": "message"
+                        },
+                        {
+                          "attachments": [
+                            {
+                              "content": {
+                                "body": [
+                                  {
+                                    "items": [
+                                      {
+                                        "columns": null,
+                                        "text": "Credit Cards:",
+                                        "type": "TextBlock",
+                                        "weight": "bolder",
+                                        "wrap": true
+                                      },
+                                      {
+                                        "columns": [
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0001",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0001"
+                                                    },
+                                                    "title": "xxxx-xxxx-0001",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0002",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0002"
+                                                    },
+                                                    "title": "xxxx-xxxx-0002",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0003",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0003"
+                                                    },
+                                                    "title": "xxxx-xxxx-0003",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0004",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0004"
+                                                    },
+                                                    "title": "xxxx-xxxx-0004",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0005",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0005"
+                                                    },
+                                                    "title": "xxxx-xxxx-0005",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0006",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0006"
+                                                    },
+                                                    "title": "xxxx-xxxx-0006",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0007",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0007"
+                                                    },
+                                                    "title": "xxxx-xxxx-0007",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0008",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0008"
+                                                    },
+                                                    "title": "xxxx-xxxx-0008",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          },
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0009",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0009"
+                                                    },
+                                                    "title": "xxxx-xxxx-0009",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0010",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0010"
+                                                    },
+                                                    "title": "xxxx-xxxx-0010",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0011",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0011"
+                                                    },
+                                                    "title": "xxxx-xxxx-0011",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0012",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0012"
+                                                    },
+                                                    "title": "xxxx-xxxx-0012",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0013",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0013"
+                                                    },
+                                                    "title": "xxxx-xxxx-0013",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0014",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0014"
+                                                    },
+                                                    "title": "xxxx-xxxx-0014",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0015",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0015"
+                                                    },
+                                                    "title": "xxxx-xxxx-0015",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0016",
+                                                      "type": "Credit Cards",
+                                                      "value": "xxxx-xxxx-0016"
+                                                    },
+                                                    "title": "xxxx-xxxx-0016",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          }
+                                        ],
+                                        "text": null,
+                                        "type": "ColumnSet",
+                                        "weight": null,
+                                        "wrap": null
+                                      }
+                                    ],
+                                    "type": "Container"
+                                  },
+                                  {
+                                    "items": [
+                                      {
+                                        "columns": null,
+                                        "text": "Debit Cards:",
+                                        "type": "TextBlock",
+                                        "weight": "bolder",
+                                        "wrap": true
+                                      },
+                                      {
+                                        "columns": [
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0017",
+                                                      "type": "Debit Cards",
+                                                      "value": "xxxx-xxxx-0017"
+                                                    },
+                                                    "title": "xxxx-xxxx-0017",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          }
+                                        ],
+                                        "text": null,
+                                        "type": "ColumnSet",
+                                        "weight": null,
+                                        "wrap": null
+                                      }
+                                    ],
+                                    "type": "Container"
+                                  },
+                                  {
+                                    "items": [
+                                      {
+                                        "columns": null,
+                                        "text": "ETickets:",
+                                        "type": "TextBlock",
+                                        "weight": "bolder",
+                                        "wrap": true
+                                      },
+                                      {
+                                        "columns": [
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0018",
+                                                      "type": "ETickets",
+                                                      "value": "xxxx-xxxx-0018"
+                                                    },
+                                                    "title": "xxxx-xxxx-0018",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              },
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0019",
+                                                      "type": "ETickets",
+                                                      "value": "xxxx-xxxx-0019"
+                                                    },
+                                                    "title": "xxxx-xxxx-0019",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          },
+                                          {
+                                            "items": [
+                                              {
+                                                "actions": [
+                                                  {
+                                                    "data": {
+                                                      "actionSubmitId": "xxxx-xxxx-0020",
+                                                      "type": "ETickets",
+                                                      "value": "xxxx-xxxx-0020"
+                                                    },
+                                                    "title": "xxxx-xxxx-0020",
+                                                    "type": "Action.Submit"
+                                                  }
+                                                ],
+                                                "type": "ActionSet"
+                                              }
+                                            ],
+                                            "spacing": "medium",
+                                            "type": "Column",
+                                            "width": "auto"
+                                          }
+                                        ],
+                                        "text": null,
+                                        "type": "ColumnSet",
+                                        "weight": null,
+                                        "wrap": null
+                                      }
+                                    ],
+                                    "type": "Container"
+                                  }
+                                ],
+                                "type": "AdaptiveCard",
+                                "version": "1.0"
+                              },
+                              "contentType": "application/vnd.microsoft.card.adaptive"
+                            }
+                          ],
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "entities": [],
+                          "from": {
+                            "id": "8120f98a-28ed-a1a3-7fed-036ce4fddd88",
+                            "name": "Metrolinx Agent",
+                            "role": "bot"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000002",
+                          "inputHint": "acceptingInput",
+                          "listenFor": [],
+                          "membersAdded": [],
+                          "membersRemoved": [],
+                          "reactionsAdded": [],
+                          "reactionsRemoved": [],
+                          "replyToId": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000",
+                          "textHighlights": [],
+                          "timestamp": "2024-11-29T11:30:01.9183596Z",
+                          "type": "message"
+                        },
+                        {
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "from": {
+                            "id": "user1"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000003",
+                          "serviceUrl": "https://directline.botframework.com/",
+                          "text": "",
+                          "timestamp": "2024-11-29T11:30:59.091078Z",
+                          "type": "message",
+                          "value": {
+                            "actionSubmitId": "xxxx-xxxx-0001",
+                            "type": "Credit Cards",
+                            "value": "xxxx-xxxx-0001"
+                          }
+                        },
+                        {
+                          "attachments": [],
+                          "channelId": "directline",
+                          "conversation": {
+                            "id": "E9uGNJNFcSM9CMbIWW6Ij2-as"
+                          },
+                          "entities": [],
+                          "from": {
+                            "id": "8120f98a-28ed-a1a3-7fed-036ce4fddd88",
+                            "name": "Metrolinx Agent",
+                            "role": "bot"
+                          },
+                          "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000004",
+                          "inputHint": "acceptingInput",
+                          "listenFor": [],
+                          "membersAdded": [],
+                          "membersRemoved": [],
+                          "reactionsAdded": [],
+                          "reactionsRemoved": [],
+                          "replyToId": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000003",
+                          "suggestedActions": {
+                            "actions": [
+                              {
+                                "text": "Yes",
+                                "title": "Yes",
+                                "type": "imBack",
+                                "value": "Yes"
+                              },
+                              {
+                                "text": "No",
+                                "title": "No",
+                                "type": "imBack",
+                                "value": "No"
+                              }
+                            ],
+                            "to": []
+                          },
+                          "text": "Are you sure you want to lock the following card:\n- **Card Type:** Credit Cards\n- **Card Value:** xxxx-xxxx-0001",
+                          "textFormat": "markdown",
+                          "textHighlights": [],
+                          "timestamp": "2024-11-29T11:30:59.9758186Z",
+                          "type": "message"
+                        }
+                      ],
+                      "watermark": "4"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403 - Check Responses",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "93"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:32:38 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string",
+                          "example": "BadArgument"
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Invalid token or secret"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "403 - Check Responses": {
+                    "value": {
+                      "error": {
+                        "code": "BadArgument",
+                        "message": "Invalid token or secret"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Send Activity",
+        "description": "Send Activity",
+        "operationId": "sendActivity",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "example": "user1"
+                      }
+                    }
+                  },
+                  "text": {
+                    "type": "string",
+                    "example": ""
+                  },
+                  "type": {
+                    "type": "string",
+                    "example": "message"
+                  },
+                  "value": {
+                    "type": "object",
+                    "properties": {
+                      "actionSubmitId": {
+                        "type": "string",
+                        "example": "xxxx-xxxx-0001"
+                      },
+                      "type": {
+                        "type": "string",
+                        "example": "Credit Cards"
+                      },
+                      "value": {
+                        "type": "string",
+                        "example": "xxxx-xxxx-0001"
+                      }
+                    }
+                  }
+                }
+              },
+              "examples": {
+                "Send Activity": {
+                  "value": {
+                    "from": {
+                      "id": "user1"
+                    },
+                    "text": "lock my card",
+                    "type": "message"
+                  }
+                },
+                "Send Activity (Adaptive Card)": {
+                  "value": {
+                    "from": {
+                      "id": "user1"
+                    },
+                    "text": "",
+                    "type": "message",
+                    "value": {
+                      "actionSubmitId": "xxxx-xxxx-0001",
+                      "type": "Credit Cards",
+                      "value": "xxxx-xxxx-0001"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200 - Send Activity / 200 - Send Activity (Adaptive Card)",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "gzip"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "170"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:30:59 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string",
+                  "example": "Accept-Encoding"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "x-ms-request-id": {
+                "schema": {
+                  "type": "string",
+                  "example": "e04b82dbe7e16c5fcb013caddbb0f8ce"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "example": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000"
+                    }
+                  }
+                },
+                "examples": {
+                  "200 - Send Activity": {
+                    "value": {
+                      "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000000"
+                    }
+                  },
+                  "200 - Send Activity (Adaptive Card)": {
+                    "value": {
+                      "id": "E9uGNJNFcSM9CMbIWW6Ij2-as|0000003"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "403 - Send Activity / 403 - Send Activity (Adaptive Card)",
+            "headers": {
+              "ARR-Disable-Session-Affinity": {
+                "schema": {
+                  "type": "string",
+                  "example": "true"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "93"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Fri, 29 Nov 2024 11:31:15 GMT"
+                }
+              },
+              "Expires": {
+                "schema": {
+                  "type": "string",
+                  "example": "-1"
+                }
+              },
+              "Pragma": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "Strict-Transport-Security": {
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-XSS-Protection": {
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string",
+                          "example": "BadArgument"
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Invalid token or secret"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "403 - Send Activity": {
+                    "value": {
+                      "error": {
+                        "code": "BadArgument",
+                        "message": "Invalid token or secret"
+                      }
+                    }
+                  },
+                  "403 - Send Activity (Adaptive Card)": {
+                    "value": {
+                      "error": {
+                        "code": "BadArgument",
+                        "message": "Invalid token or secret"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "CONVERSATION_ID",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "tags": []
+}
