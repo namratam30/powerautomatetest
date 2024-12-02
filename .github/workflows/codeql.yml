@@ -84,14 +84,14 @@ jobs:
     #     POWERPLATFORM_USERNAME: ${{ secrets.POWERPLATFORM_USERNAME }}
     #     POWERPLATFORM_PASSWORD: ${{ secrets.POWERPLATFORM_PASSWORD }}
 
-    - name: Build Solutions
-      shell: pwsh
-      run: |
-        Get-ChildItem -Recurse -Filter "*.cdsproj" |
-          ForEach-Object {
-            msbuild /t:restore $_.FullName
-            msbuild /p:configuration=Release $_.FullName
-          }
+    #- name: Build Solutions
+    #  shell: pwsh
+    #  run: |
+     #   Get-ChildItem -Recurse -Filter "*.cdsproj" |
+      #    ForEach-Object {
+       #     msbuild /t:restore $_.FullName
+        #    msbuild /p:configuration=Release $_.FullName
+         # }
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
